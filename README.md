@@ -1,2 +1,2 @@
 ## WebAppReader
-### author:woaidaxia
+### author-woaidaxia
