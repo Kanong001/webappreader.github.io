@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" href="/static/css/all.css">
+    <title>Document</title>
+</head>
+<body>
+<div id="app" style="width: {{srceen_width}}px;height: 100%;overflow: hidden;">
+    <% include include/common-header.html%>
+    <div class="top clear">
+        <a href="/" class="top__back"></a>
+        <div class="search__input">
+            <b class="search_input-icon"></b>
+            <input id="search_input-box" type="text" placeholder="输入书名/作者/关键字">
+            <a href="javascript:" class="search-btn" @click="searchBooks">搜索</a>
+        </div>
+    </div>
+    <div class="container-scroll">
+        <div class="all-tag" v-show="show_all_tags">
+            <ul class="m-tag -color">
+                <li>
+                    <div class="u-tag">我的美女老婆</div>
+                </li>
+                <li>
+                    <div class="u-tag">复仇千金</div>
+                </li>
+                <li>
+                    <div class="u-tag">豪门小老婆</div>
+                </li>
+                <li>
+                    <div class="u-tag">我的老婆是双胞胎</div>
+                </li>
+                <li>
+                    <div class="u-tag">庶女</div>
+                </li>
+            </ul>
+        </div>
+        <div class="search__nothing" v-show="show_search_nothing">
+            <p class="search__nothing-info">没有相应的搜索结果</p>
+        </div>
+        <div class="search__result" v-show="is_show_results">
+            <ul class="book-list">
+                <li v-for="item in search_data">
+                    <a href="javascript:">
+                        <div class="u-book">
+                            <div class="book-cover">
+                                <img alt="{{item.title}}"
+                                     :src="item.cover">
+                            </div>
+                            <div class="book-info">
+                                <h3 class="book-title">{{item.title}}</h3>
+                                <p class="summary">{{item.intro}}</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="/static/js/zepto.js"></script>
+<script src="/static/js/vue.js"></script>
+<script src="/static/js/pages/all.js"></script>
+<script src="/static/js/pages/search.js"></script>
+</body>
+</html>

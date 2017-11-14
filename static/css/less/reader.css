@@ -1,0 +1,324 @@
+/********************
+ * 页面样式
+ ********************/
+/* =================
+    基本默认值
+   ================= */
+html {
+  font-size: 62.5%;
+  color: #222;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style-type: none;
+}
+/* =================
+    工具样式
+   ================= */
+.center-block {
+  display: block;
+  margin: 0 auto;
+}
+.pull-left {
+  float: left !important;
+}
+.pull-right {
+  float: right !important;
+}
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.hide {
+  display: none !important;
+}
+.invisible {
+  visibility: hidden !important;
+}
+.text-hide {
+  font: 0/0;
+  color: transparent;
+  background-color: transparent;
+  text-shadow: none;
+  border: 0;
+}
+.clear:after,
+.clear:before {
+  content: " ";
+  display: table;
+}
+.clear:after {
+  clear: both;
+}
+.clear {
+  zoom: 1;
+}
+/* =================
+    自定义样式
+   ================= */
+body {
+  width: 100%;
+  font-size: 1.2rem;
+  text-align: left;
+  background-color: #e9dfc7;
+  overflow: hidden;
+}
+body .container {
+  width: 100%;
+}
+body .container .artical-action-mid {
+  width: 100%;
+  height: 40%;
+  position: fixed;
+  top: 30%;
+  left: 0;
+  z-index: 1001;
+}
+body .container .top-nav {
+  width: 100%;
+  height: 2.8rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: #000;
+}
+body .container .top-nav .icon-back {
+  position: absolute;
+  top: 0.5rem;
+  left: 1.4rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  border: 1px solid #555;
+  border-radius: 0.8rem;
+  background: #000;
+}
+body .container .top-nav .icon-back .left-line {
+  width: 0.7rem;
+  height: 0.09rem;
+  background: #fff;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.3rem;
+  -webkit-transform: rotate(-30deg);
+  -moz-transform: rotate(-30deg);
+  -ms-transform: rotate(-30deg);
+  -o-transform: rotate(-30deg);
+  transform: rotate(-30deg);
+}
+body .container .top-nav .icon-back .right-line {
+  width: 0.7rem;
+  height: 0.09rem;
+  background: #fff;
+  position: absolute;
+  top: 0.8rem;
+  left: 0.3rem;
+  -webkit-transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  -o-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+body .container .top-nav .nav-title {
+  position: absolute;
+  top: 0rem;
+  left: 3.4rem;
+  color: #ccc;
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+}
+body .container .m-read-content {
+  width: 100%;
+  min-height: 100%;
+  padding: 1.4rem 1.4rem 4.8rem 1.4rem;
+  font-size: 1.4rem;
+  color: #555;
+  line-height: 3rem;
+}
+body .container .m-read-content h4 {
+  font-size: 2rem;
+  color: #736357;
+  border-bottom: 1px solid #736357;
+  letter-spacing: 2px;
+  margin: 0 0 1rem 0;
+}
+body .container .m-read-content p {
+  margin: 0.5rem 0;
+  text-indent: 2rem;
+  letter-spacing: 0;
+  line-height: 2.4rem;
+}
+body .container .m-button-bar {
+  width: 100%;
+  display: block;
+  margin-top: -3.5rem;
+}
+body .container .m-button-bar .u-tab {
+  width: 70%;
+  height: 3.4rem;
+  margin: 0 auto 1rem;
+  line-height: 3.4rem;
+  border: 1px solid #858382;
+  border-radius: 8px;
+  background-color: #000;
+  opacity: 0.9;
+}
+body .container .m-button-bar .u-tab li {
+  display: inline-block;
+  width: 48%;
+  text-align: center;
+}
+body .container .m-button-bar .u-tab li a:link,
+body .container .m-button-bar .u-tab li a:visited {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+body .container .m-button-bar .u-tab li + li {
+  border-left: 1px solid #858382;
+}
+body .container .nav-pannel-bk {
+  width: 100%;
+  height: 10rem;
+  position: fixed;
+  left: 0;
+  bottom: 5rem;
+  background: #000;
+  opacity: 0.9;
+  z-index: 1002;
+}
+body .container .nav-pannel {
+  width: 100%;
+  height: 10rem;
+  position: fixed;
+  left: 0;
+  bottom: 5rem;
+  background: none;
+  color: #fff;
+  z-index: 1003;
+}
+body .container .nav-pannel .child-mod {
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+}
+body .container .nav-pannel .child-mod span {
+  padding-left: 1rem;
+  padding-right: 2rem;
+}
+body .container .nav-pannel .child-mod button {
+  background: none;
+  border: 1px #8c8c8c solid;
+  border-radius: 1.6rem;
+  padding: 0.5rem 3rem;
+  color: #fff;
+}
+body .container .nav-pannel .child-mod button + button {
+  margin-left: 0.8rem;
+}
+body .container .nav-pannel .child-mod .bk-container {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 2.83rem;
+  height: 2.83rem;
+  border-radius: 1.4rem;
+  display: inline-block;
+  vertical-align: -1.5rem;
+  margin-right: 1rem;
+}
+body .container .nav-pannel .child-mod .bk-color1 {
+  background: #fff;
+}
+body .container .nav-pannel .child-mod .bk-color2 {
+  background: #e9dfc7;
+}
+body .container .nav-pannel .child-mod .bk-color3 {
+  background: #cdefce;
+}
+body .container .nav-pannel .child-mod .bk-color4 {
+  background: #283548;
+}
+body .container .nav-pannel .child-mod .bk-color5 {
+  background: #0f1410;
+}
+body .container .nav-pannel .child-mod .bk-container-current {
+  position: absolute;
+  top: -0.11rem;
+  left: -0.08rem;
+  width: 2.9rem;
+  height: 2.9rem;
+  border-radius: 1.45rem;
+  border: 1px solid #ff7800;
+}
+body .container .footer-nav {
+  width: 100%;
+  height: 5rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.9;
+}
+body .container .footer-nav .nav-tab {
+  width: 100%;
+}
+body .container .footer-nav .nav-tab li {
+  display: inline-block;
+  width: 32%;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+}
+body .container .footer-nav .nav-tab li .icon {
+  width: 100%;
+  height: 2rem;
+  margin: 0.8rem 0 0.3rem;
+  font-size: 1.4rem;
+}
+body .container .footer-nav .nav-tab li .icon .line {
+  margin: 0.3rem auto 0;
+  width: 2rem;
+  height: 0.2rem;
+  background: #fff;
+}
+body .container .footer-nav .nav-tab li .icon .box {
+  width: 3rem;
+  margin: 0 auto;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+body .container .footer-nav .nav-tab li .icon .box .white-arc {
+  display: inline-block;
+  margin: 0 auto;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 0.8rem;
+  background: #fff;
+}
+body .container .footer-nav .nav-tab li .icon .box .black-arc {
+  width: 1.4rem;
+  height: 1.4rem;
+  position: absolute;
+  top: -0.3rem;
+  left: 1.3rem;
+  border-radius: 0.7rem;
+  background: #000;
+  z-index: 999;
+}
+body .activate {
+  color: #ff7800 !important;
+}
+body .activate-icon {
+  background-color: #ff7800 !important;
+}

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone-no">
+    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" href="/static/css/all.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>分类</title>
+</head>
+<body>
+<div id="app" :style="{width: windowWidth+'px',height: '100%',overflow: 'hidden'}">
+    <% include ./include/common-header.html %>
+    <div class="container-scroll">
+        <section class="group">
+            <div class="group_top">
+                <em class="group_top_icon"></em>
+                <h2>男生小说</h2>
+            </div>
+            <ul class="u-list">
+                <li v-for="item in male">
+                    <div class="u-item" :style="{backgroundImage: 'url(&quot;'+ item.new_image+'&quot;)'}">
+                        <h3 class="u-title">{{item.label}}</h3>
+                        <p class="number">{{item.fiction_count}}</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="group">
+            <div class="group_top">
+                <em class="group_top_icon"></em>
+                <h2>女生小说</h2>
+            </div>
+            <ul class="u-list">
+                <li v-for="item in female">
+                    <div class="u-item" :style="{backgroundImage: 'url(&quot;'+ item.new_image+'&quot;)'}">
+                        <h3 class="u-title">{{item.label}}</h3>
+                        <p class="number">{{item.fiction_count}}</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </div>
+    <% include include/dialog.html %>
+</div>
+<script src="/static/js/zepto.js"></script>
+<script src="/static/js/vue.js"></script>
+<script src="/static/js/pages/all.js"></script>
+<script src="/static/js/pages/category.js"></script>
+</body>
+</html>

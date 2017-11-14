@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" href="/static/css/index.css">
+    <title>书城首页</title>
+</head>
+<body>
+<div id="app" :style="{width: screen_width+'px',height: '100%',overflow: 'hidden'}">
+    <% include include/header.html %>
+    <div id="container" :style="{width: double_screen_width + 'px',height: '100%',transitionDuration: duration + 's',transform:'translate3d('+ position +'px,0px,0px)'}" class="test">
+        <div class="container-warp" :style="{width: screen_width +'px',float: 'left'}">
+            <div class="container-scroll" style="top: 0;">
+                <% include include/index-top.html %>
+                <% include include/index-hot.html %>
+                <% include include/index-recommend.html %>
+                <% include include/index-female.html %>
+                <% include include/index-male.html %>
+                <% include include/index-free.html %>
+                <% include include/index-topic.html%>
+                <% include include/bottom.html %>
+            </div>
+        </div>
+        <div :style="{width: screen_width + 'px',float: 'left'}" id="bookcase">
+            <% include include/index-shelf.html %>
+        </div>
+    </div>
+    <% include include/dialog.html %>
+
+</div>
+<script src="/static/js/vue.js"></script>
+<script src="/static/js/zepto.js"></script>
+<script src="/static/js/pages/all.js"></script>
+<script src="/static/js/pages/index.js"></script>
+<script>
+
+</script>
+</body>
+</html>

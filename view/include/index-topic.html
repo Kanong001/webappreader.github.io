@@ -1,0 +1,17 @@
+<section class="channel-h5">
+    <div class="channel-h5__header">
+        <p class="channel-h5__title">
+            精选专题<i>推</i>
+        </p>
+    </div>
+    <ul class="topic-table">
+        <li v-for="item in topic">
+            <a href="javascript:;">
+                <div class="topic-cover">
+                    <img :src=item.ad_pic_url :alt=item.ad_copy>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <a class="channel-grounp__footer" href="javascript:;">更多精彩专题&gt&gt</a>
+</section>

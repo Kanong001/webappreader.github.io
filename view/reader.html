@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" href="/static/css/less/reader.css">
+    <title>阅读器</title>
+</head>
+<body>
+<div id="root" class="container">
+    <div id="actionMid" class="artical-action-mid"></div>
+    <div id="topNav" class="top-nav" style="display: none;">
+        <a href="/">
+            <div class="icon-back">
+                <div class="left-line"></div>
+                <div class="right-line"></div>
+            </div>
+            <div class="nav-title">返回书架</div>
+        </a>
+    </div>
+    <div id="fictionChapterTitle"></div>
+    <div id="fictionContainer" class="m-read-content">
+
+    </div>
+    <div class="m-button-bar" style="display: none;">
+        <ul class="u-tab">
+            <li id="prev-button"><a href="#">上一章</a></li>
+            <li id="next-button"><a href="#">下一章</a></li>
+        </ul>
+    </div>
+
+    <div class="nav-pannel-bk font_container" style="display: none;"></div>
+    <div id="fontContainer" class="nav-pannel font_container" style="display: none;">
+        <div class="child-mod">
+            <span>字号</span>
+            <button id="largeFont">大</button>
+            <button id="smallFont">小</button>
+        </div>
+        <div class="child-mod">
+            <span>背景</span>
+            <div class="bk-container bk-color1">
+                <div class="bk-container-current"></div>
+            </div>
+            <div class="bk-container bk-color2">
+                <div class="bk-container-current"></div>
+            </div>
+            <div class="bk-container bk-color3">
+                <div class="bk-container-current"></div>
+            </div>
+            <div class="bk-container bk-color4">
+                <div class="bk-container-current"></div>
+            </div>
+            <div class="bk-container bk-color5">
+                <div class="bk-container-current"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="footerNav" class="footer-nav" style="display: none;">
+        <ul class="nav-tab">
+            <li id="listButton">
+                <div class="icon">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <div>目录</div>
+            </li>
+            <li id="fontButton">
+                <div class="icon">Aa</div>
+                <div>字体</div>
+            </li>
+            <li id="nightButton">
+                <div class="icon">
+                    <div class="box">
+                        <div class="white-arc"></div>
+                        <div class="black-arc"></div>
+                    </div>
+                </div>
+                <div id="night">夜间</div>
+            </li>
+        </ul>
+    </div>
+</div>
+<script src="/static/js/zepto.js"></script>
+<script>
+    window.jQuery = $;
+</script>
+<script src="/static/js/jquery.jsonp.js"></script>
+<script src="/static/js/jquery-base64.js"></script>
+<script src="/static/js/pages/reader.js"></script>
+</body>
+</html>

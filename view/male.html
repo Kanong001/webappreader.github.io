@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zn-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone-no">
+    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" href="/static/css/all.css">
+    <title>男生频道</title>
+</head>
+<body>
+<div id="app" :style="{width: screenWidth+'px',height: '100%',overflow:'hidden'}">
+    <% include ./include/common-header.html %>
+    <div class="container-scroll">
+        <section class="main-card" v-for="card in d">
+            <div class="notice">
+                <p>{{card.ad_name}}</p>
+            </div>
+            <ul class="book-list">
+                <li v-for="item in card.data.data">
+                    <a :href="'/book?id='+item.fiction_id">
+                        <div class="u-book book">
+                            <div class="book-cover">
+                                <img :alt="item.title" :src="item.cover">
+                            </div>
+                            <div class="book-info info">
+                                <h3 class="book-title">{{item.title}}</h3>
+                                <p class="summary">{{item.summary}}</p>
+                                <div class="wrap">
+                                    <div class="book-tag" v-for="(tag,index) in item.tags" v-if="index<2">{{tag}}</div>
+                                    <p class="author single-line">
+                                        <span class="author">{{item.authors}}</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="bottom-more">
+                <a href="javascript:">
+                    <p class="more">{{card.more}}</p>
+                </a>
+            </div>
+        </section>
+    </div>
+    <% include include/dialog.html %>
+</div>
+<script src="/static/js/zepto.js"></script>
+<script src="/static/js/vue.js"></script>
+<script src="/static/js/pages/all.js"></script>
+<script src="/static/js/pages/male.js"></script>
+</body>
+</html>

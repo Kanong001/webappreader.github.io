@@ -1,0 +1,39 @@
+<section class="top-home">
+    <a href="/search">
+        <div class="top-home__search">输入书名/作者/关键字</div>
+    </a>
+    <div class="slide-banner">
+        <div>
+            <a :herf=top[0].reference_id>
+                <img class="cover"
+                     :src=top[0].ad_pic_url>
+            </a>
+        </div>
+    </div>
+    <ul class="top-home__btn">
+        <li>
+            <a href="/male">
+                <img class="top-home__icon" src="/static/img/male.png" alt="男生">
+                <p class="top-home__des">{{top[1].ad_name}}</p>
+            </a>
+        </li>
+        <li>
+            <a href="/female">
+                <img class="top-home__icon" src="/static/img/female.png" alt="女生">
+                <p class="top-home__des">{{top[2].ad_name}}</p>
+            </a>
+        </li>
+        <li>
+            <a href="/category">
+                <img class="top-home__icon" src="/static/img/category.png" alt="分类">
+                <p class="top-home__des">{{top[3].ad_name}}</p>
+            </a>
+        </li>
+        <li>
+            <a href="/rank">
+                <img class="top-home__icon" src="/static/img/rank.png" alt="排行">
+                <p class="top-home__des">{{top[4].ad_name}}</p>
+            </a>
+        </li>
+    </ul>
+</section>

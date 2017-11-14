@@ -1,0 +1,22 @@
+<section class="channel-group">
+    <div class="channel-group__header">
+        <h2 class="channel-group__title">限时免费</h2>
+    </div>
+    <ul class="book-table">
+        <li v-for="(item,index) in free" v-if="index < 6">
+            <a :href="'/book?id='+item.fiction_id">
+                <div class="u-book">
+                    <div class="book-cover">
+                        <img :alt=item.ad_name
+                             src="http://cover.read.duokan.com/mfsv2/download/fdsc3/p01K2lOxEjqn/2mpNESaGLfSSAU.jpg!s">
+                        <div class="u-tagRT -freefiction"></div>
+                    </div>
+                    <div class="book-info">
+                        <h3 class="title">{{item.ad_name}}</h3>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <a class="channel-grounp__footer" href="/category">更多限免佳作&gt&gt</a>
+</section>
